@@ -11,6 +11,9 @@ router.get("/finished", todosController.getAllFinishedTodos);
 // Get one todo by ID
 router.get("/:id", todosController.getTodoById);
 
+// Get todos by user ID
+// router.get("/user/:userId", todosController.getTodosByUserId);
+
 // Create a todo
 router.post("/", todosController.createTodo);
 

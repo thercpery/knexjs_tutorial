@@ -7,7 +7,7 @@ exports.up = (knex) => {
         .createTable("users", (table) => {
             table.increments("id").primary(); // This is the primary key.
             table.string("name").notNullable();
-            table.string("email").notNullable();
+            table.string("email").notNullable().unique();
             table.timestamp("created_at").defaultTo(knex.fn.now());
             table.timestamp("updated_at").defaultTo(knex.fn.now());
         })

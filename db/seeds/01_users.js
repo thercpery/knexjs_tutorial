@@ -11,5 +11,5 @@ exports.seed = async function(knex) {
     {id: 3, name: 'RC Pery', email: "rcpery@mail.com"}
   ]);
 
-  await knex.raw("select setval('users_id_seq', max(id)) from users");
+  await knex.raw("select setval('users_id_seq', max(users.id)) from users");
 };

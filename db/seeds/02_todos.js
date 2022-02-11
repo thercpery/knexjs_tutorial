@@ -38,6 +38,6 @@ exports.seed = async function(knex) {
     }
   ]);
 
-  await knex.raw("select setval('todos_id_seq', max(id)) from todos");
+  await knex.raw("select setval('todos_id_seq', max(todos.id)) from todos");
 };
 
